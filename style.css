@@ -18,17 +18,17 @@ body {
   transition-timing-function: ease;
 }
 
-/* ===== LIGHT THEME (DEFAULT) ===== */
+/*  LIGHT THEME  */
 :root {
-  background-color: #3b2f2f; /* Rich brown */
-  --text-color: #fffaf0; /* Soft cream */
-  --accent-color: #d4af37; /* Gold */
+  background-color: #3b2f2f; 
+  --text-color: #fffaf0; 
+  --accent-color: #d4af37; 
   --card-background-color: rgba(255, 255, 255, 0.08);
   --navbar-background-color: rgba(0, 0, 0, 0.2);
   --footer-background-color: #2b1e1e;
 }
 
-/* ===== DARK THEME ===== */
+/* DARK THEME */
 body.dark-mode {
   --background-color: #1b1212;
   --text-color: #f1e2b8;
@@ -38,7 +38,7 @@ body.dark-mode {
   --footer-background-color: #120a0a;
 }
 
-/* ===== NAVBAR ===== */
+/*  NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ nav {
   z-index: 10;
 }
 
-/* ====== Contact Section ====== */
+/* Contact Section  */
 .page-section {
   min-height: 100vh;
   background-color: var(--background-color);
@@ -100,7 +100,7 @@ nav {
   text-decoration: underline;
 }
 
-/* ====== Footer ====== */
+/* footer */
 footer {
   text-align: center;
   padding: 1.2rem;
@@ -138,7 +138,7 @@ footer {
   color: var(--accent-color);
 }
 
-/* ===== DARK MODE TOGGLE BUTTON ===== */
+/* DARK MODE TOGGLE BUTTON */
 .toggle-btn {
   background-color: transparent;
   border-width: 2px;
@@ -162,7 +162,7 @@ footer {
   color: #3b2f2f;
 }
 
-/* ===== HERO SECTION ===== */
+/*  HERO SECTION */
 .hero {
   text-align: center;
   padding-top: 6rem;
@@ -210,7 +210,7 @@ footer {
   transform: translateY(-3px);
 }
 
-/* ===== ABOUT SECTION ===== */
+/*  ABOUT SECTION  */
 .about {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -246,7 +246,7 @@ footer {
   color: var(--accent-color);
 }
 
-/* ===== PROJECTS SECTION ===== */
+/* PROJECTS SECTION  */
 .projects {
   text-align: center;
   padding-top: 5rem;
@@ -310,7 +310,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* ===== CONTACT SECTION ===== */
+/* CONTACT SECTION  */
 .contact {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -371,7 +371,7 @@ footer {
   border-color: #f1e2b8;
 }
 
-/* ===== FOOTER ===== */
+/*  FOOTER */
 footer {
   background-color: var(--footer-background-color);
   color: var(--text-color);
@@ -379,4 +379,117 @@ footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 0.9rem;
+}
+/*  RESPONSIVENESS */
+
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .page-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .toggle-btn {
+    margin-top: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .live-btn,
+  .git-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
 }
