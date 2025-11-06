@@ -1,0 +1,382 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "poppins";
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
+
+/* ===== LIGHT THEME (DEFAULT) ===== */
+:root {
+  background-color: #3b2f2f; /* Rich brown */
+  --text-color: #fffaf0; /* Soft cream */
+  --accent-color: #d4af37; /* Gold */
+  --card-background-color: rgba(255, 255, 255, 0.08);
+  --navbar-background-color: rgba(0, 0, 0, 0.2);
+  --footer-background-color: #2b1e1e;
+}
+
+/* ===== DARK THEME ===== */
+body.dark-mode {
+  --background-color: #1b1212;
+  --text-color: #f1e2b8;
+  --accent-color: #c5a020;
+  --card-background-color: rgba(255, 255, 255, 0.05);
+  --navbar-background-color: rgba(0, 0, 0, 0.6);
+  --footer-background-color: #120a0a;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: var(--navbar-background-color);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
+/* ====== Contact Section ====== */
+.page-section {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.page-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.page-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page-section li {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.page-section a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-section a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: var(--card-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent-color);
+}
+
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+.toggle-btn {
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-radius: 50%;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition-property: transform, background-color;
+  transition-duration: 0.3s;
+}
+
+.toggle-btn:hover {
+  transform: rotate(25deg);
+  background-color: var(--accent-color);
+  color: #3b2f2f;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-image: linear-gradient(160deg, #3b2f2f 0%, #5a4228 100%);
+  color: var(--text-color);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero h2 span {
+  color: var(--accent-color);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  background-color: var(--accent-color);
+  color: #3b2f2f;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition-property: background-color, transform;
+  transition-duration: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f1e2b8;
+  transform: translateY(-3px);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.about-container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about h2 span {
+  color: var(--accent-color);
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about strong {
+  color: var(--accent-color);
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projects h2 span {
+  color: var(--accent-color);
+}
+
+.projects p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+.project-card {
+  background-color: var(--card-background-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-radius: 10px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px rgba(212, 175, 55, 0.4);
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact h2 span {
+  color: var(--accent-color);
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f1e2b8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+}
